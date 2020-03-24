@@ -1,0 +1,51 @@
+.question-list {
+  padding: 10px 0;
+}
+
+.question {
+  background: white;
+}
+
+.question-content {
+  padding: 10px 15px;
+}
+
+.question + .question {
+  margin-top: 10px;
+}
+
+.question-text,
+.question-answer {
+  word-wrap: break-word;
+  margin-bottom: 10px;
+}
+
+.question-text {
+  color: #005a55;
+}
+
+.question-answer {
+  padding: 10px 0 0 25px;
+  border-radius: 10px;
+}
+
+.question-answer .username {
+  padding: 10px 25px 10px 10px;
+  float: right;
+  color: #005a55;
+}
+
+.question-date {
+  color: #a0a0a0;
+}
+
+.question-actions {
+  font-size: 20px;
+  border-top: 1px solid #d9e6e5;
+  text-align: right;
+  padding: 10px 15px;
+}
+
+.question-actions a {
+  margin-left: 10px;
+}
