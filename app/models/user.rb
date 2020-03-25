@@ -8,12 +8,15 @@ class User < ApplicationRecord
 
   has_many :questions
 
-  validates :email, :username, presence: true
-  validates :email, :username, uniqueness: true
+  validates :email, :username, presence: true, uniqueness: true
+
+  validates :email, format: { with: /\A[^@\s]+@(?:[-a-z0-9]+\.)+[a-z]{2,}\z/i.freeze }
+  validates :username, length: { maximum: 40 }, format: { with: /\A[\w]+\z/.freeze }
 
   validates_presence_of :password, on: :create
   validates_confirmation_of :password
 
+  before_validation :normalize_username_and_email
   before_save :encrypt_password
 
   def encrypt_password
@@ -46,5 +49,12 @@ class User < ApplicationRecord
     return user if user.password_hash == hashed_password
 
     nil
+  end
+
+  private
+
+  def normalize_username_and_email
+    self.username&.downcase!
+    self.email&.downcase!
   end
 end

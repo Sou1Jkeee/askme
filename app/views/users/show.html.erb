@@ -14,6 +14,17 @@
   <div class="user-ask-button container text-center">
     <%= link_to "Спроси меня", '', class: 'button button-light', id: 'ask-button' %>
   </div>
+
+  <div>
+    <% if @questions.size.zero? %>
+      <p>У пользователя нет вопросов</p>
+    <% else %>
+      <p>
+        <%= @questions.size %>
+        <%= incline(@questions.size, 'вопрос', 'вопроса', 'вопросов') %>
+      </p>
+    <% end %>
+  </div>
 </div>
 <div class="user-question-form-div column-1-4 column-1-4-right" id="ask-form">
   <div class="user-question-form buffer-both">
