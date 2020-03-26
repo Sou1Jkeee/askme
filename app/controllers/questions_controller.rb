@@ -12,11 +12,7 @@ class QuestionsController < ApplicationController
     if @question.save
       redirect_to user_path(@question.user), notice: 'Вопрос успешно создан.'
     else
-      if @question == nil
-        render :new
-      else
-        redirect_to user_path(@question.user), notice: 'Нельзя отправить пустой вопрос.'
-      end
+      render :edit
     end
   end
 
