@@ -11,6 +11,8 @@ gem 'puma', '~> 3.11'
 gem 'jquery-rails'
 # use uglifier for heroku
 gem 'uglifier'
+# use for logs from heroku
+gem 'rails_12factor'
 
 group :production do
   gem 'pg'
