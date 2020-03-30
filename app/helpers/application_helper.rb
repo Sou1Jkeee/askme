@@ -11,7 +11,7 @@ module ApplicationHelper
     content_tag 'span', '', class: "fa fa-#{icon_class}"
   end
 
-  def incline(num, one, few, many)
+  def declension(num, one, few, many)
     num %= 100
     num_dec = num % 10
 
