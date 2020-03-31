@@ -12,6 +12,7 @@ class User < ApplicationRecord
 
   validates :email, format: { with: /\A[^@\s]+@(?:[-a-z0-9]+\.)+[a-z]{2,}\z/i.freeze }
   validates :username, length: { maximum: 40 }, format: { with: /\A[\w]+\z/.freeze }
+  validates :bgcolor, format: { with: /#([a-f\d]{6}|[a-f\d]{3})\z/i.freeze }
 
   validates_presence_of :password, on: :create
   validates_confirmation_of :password
