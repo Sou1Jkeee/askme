@@ -36,6 +36,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    @user.destroy
+    session[:user_id] = nil
+    redirect_to root_url, notice: "Пользователь успешно удален"
+  end
+
   def show
     @questions = @user.questions.order(created_at: :desc)
 
