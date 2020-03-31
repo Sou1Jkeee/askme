@@ -4,6 +4,12 @@
       <%= question.text %>
     </div>
 
+    <div class="question text-small question-author">
+      <% if question.author %>
+        <%= link_to "@#{question.author.username}", user_path(question.author) %>
+      <% end %>
+    </div>
+
     <% if question.answer.present? %>
       <div class="question-answer text-lead">
         <%= question.answer %>

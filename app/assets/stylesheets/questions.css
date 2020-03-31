@@ -49,3 +49,7 @@
 .question-actions a {
   margin-left: 10px;
 }
+
+.question-author {
+  margin: 10px 5px;
+}
