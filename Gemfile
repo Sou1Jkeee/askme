@@ -14,6 +14,8 @@ gem 'uglifier'
 # use for logs from heroku
 gem 'rails_12factor'
 
+gem 'recaptcha', require: 'recaptcha/rails'
+
 group :production do
   gem 'pg'
 end
@@ -21,6 +23,7 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'dotenv-rails', require: 'dotenv/rails-now'
   gem 'sqlite3'
 end
 

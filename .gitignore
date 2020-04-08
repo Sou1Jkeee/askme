@@ -7,6 +7,10 @@ bunde install# See https://help.github.com/articles/ignoring-files for more abou
 # Ignore bundler config.
 /.bundle
 
+/.idea
+/.env
+/.vscode
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
@@ -29,5 +33,3 @@ bunde install# See https://help.github.com/articles/ignoring-files for more abou
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-
-.idea
