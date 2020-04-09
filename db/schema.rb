@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_31_143428) do
+ActiveRecord::Schema.define(version: 2020_04_09_111416) do
 
   create_table "questions", force: :cascade do |t|
     t.string "text"
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 2020_03_31_143428) do
     t.string "password_salt"
     t.string "avatar_url"
     t.string "bgcolor", default: "#005a55"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
 end
