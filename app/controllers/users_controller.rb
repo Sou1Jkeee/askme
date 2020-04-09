@@ -8,12 +8,12 @@ class UsersController < ApplicationController
   end
 
   def new
-    redirect_to root_path, alert: 'Вы уже залогинены' if  current_user.present?
+    redirect_to root_path, alert: 'Вы уже залогинены' if current_user.present?
     @user = User.new
   end
 
   def create
-    redirect_to root_path, alert: 'Вы уже залогинены' if  current_user.present?
+    redirect_to root_path, alert: 'Вы уже залогинены' if current_user.present?
 
     @user = User.new(user_params)
 
@@ -39,7 +39,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     session[:user_id] = nil
-    redirect_to root_path, notice: "Пользователь удален"
+    redirect_to root_path, notice: 'Пользователь удален'
   end
 
   def show
