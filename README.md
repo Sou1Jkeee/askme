@@ -1,24 +1,14 @@
-# README
+# Клон ask.fm на Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+У пользователей есть возможность задавать вопросы
+другим пользователям, отвечать на вопросы заданные им и прочее.
 
-Things you may want to cover:
+## Установка и запуск
 
-* Ruby version
+```
+bundle install
+rails db:migrate
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Демо версия доступна на хероку
+* [ask-me-sjkeee.herokuapp.com](https://ask-me-sjkeee.herokuapp.com/)
